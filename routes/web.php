@@ -16,6 +16,9 @@ use App\Http\Controllers\PostController;
 */
 
 Route::redirect('/', '/auth/login', 301);
+Route::redirect('/login', '/auth/login', 301);
+Route::redirect('/register', '/auth/register', 301);
+
 
 Route::get('/auth/register', function () { return view('user.register'); })
 -> name("register")
